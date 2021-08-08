@@ -24,6 +24,28 @@ button {
     font-size: large;
 
 }
+
+button span {
+    position: relative;
+    z-index: 2;
+}
+button::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #7D3269;
+    transition: all .35s;
+}
+button:hover {
+    color: #fff;
+}
+button:hover:after {
+    width: 100%;
+    
+}
 // .first_section {
 //     background-image: url("../images/Band_Mural_Header-desktop.jpg") ;
 //     background-size: contain;
@@ -117,12 +139,29 @@ button {
   .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
-  .nav_icon {
+  .nav_wrapper {
+      display: flex;
       position: fixed;
       top: 1em;
       left: 1em;
-      width: 100px;
+      
       color: white;
+      .nav_icon {
+        width: 100px;
+      }
+      .nav_menu {
+          color: white;
+          padding: 0.8em 0.4em;
+          font-size: 2em;
+      }
+      .star_icon {
+        padding: 3.8em 0.4em;
+        font-size: 0.6em;
+      }
+      .search {
+        font-size: 1.5em;
+        padding: 1.1em 0.4em;
+      }
   }
   /* Caption text */
   .text {
@@ -316,19 +355,26 @@ button {
       }
       .fourth_section {
           .wrapper {
-            margin-left: 5em;  
+              
             display: flex;
             justify-content: space-around;
+            margin-top: 6em;
+            margin-bottom: 4em;
               
               .title {
                 font-family: 'Poppins';
-                font-size: 1.6em;
+                font-size: 2.6em;
                 -webkit-font-smoothing:antialiased;
                 font-weight: bold;
+                width: 700px;
+                text-align: left;
               }
               button {
-
+                height: 53px;
+                padding: 0em 3em;
+                margin-top: 3em;
               }
+
           }
           .image_gallery {
               .image_wrapper{
@@ -363,9 +409,10 @@ button {
           }
 
        .fifth_section {
-           .title_wrapper {
+           .heading_wrapper {
                display: flex;
-               margin-left: 20px;
+               margin-left: 8.9em;
+                margin-top: 8em;
                .explore_icon {
                 color: purple;
                 font-size: 24px;
@@ -383,7 +430,7 @@ button {
            }
            .article_container {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: flex-start;
                .article_wrapper {
                 padding: 2em 4em;
                 margin: 2em;
@@ -408,8 +455,8 @@ button {
                    }       
                }
                button {
-                width: 17em;
-                height: 4em;
+                width: 13em;
+                height: 53px;
                 margin-top: 8em;
                }
             
