@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./sass/app.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0;
+        }
+
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            /* max-width: 1000px; */
+            position: relative;
+            max-height: 100%;
+            margin: auto;
+        }
+        img#hero-img {
+            max-height: 100vh;
+        }
+
+        .slideshow-arrows {
+            max-width: 100px;
+            position: relative;
+            margin: auto;
+            margin-right: 200px;
+            height: 50px;
+            background: #933e9d;
+            /* text-align: right; */
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 0%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 24px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: left;
+        }
+
+        #thumb-caption {
+            display: inline-block;
+            /* text-align: center; */
+            color: #f2f2f2;
+            font-size: 20px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 0;
+            /* margin: auto; */
+            left: 40%;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #222;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        .thumbnail {
+            width: 200px;
+            position: absolute;
+            left: 100%;
+            bottom: 0px;
+        }
+
+        .thumbnail figure {
+            margin: 0;
+        }
+
+        @-webkit-keyframes fade {
+        from {
+            opacity: .4;
+        }
+
+        to {
+            opacity: 1;
+        }
+        }
+
+        @keyframes fade {
+        from {
+            opacity: .4;
+        }
+
+        to {
+            opacity: 1;
+        }
+        }
+
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+    </style> -->
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="fade">
+            <img id="hero-img" src="" style="">
+            <div class="text">
+                <h1 class="header">Discover the real DC</h1>
+                <p class="header_description">Awe inspiring. Heart thumping. Mind Changing. Discover something new and you will feel alive, too.</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="slideshow-arrows">
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        <div class="thumbnail fade">
+            <figure>
+                <img id="thumb-img" src="" style="width:100%">
+                <figcaption id="thumb-caption"></figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="second_section">
+        <div class="text_section">
+            <div class="page_heading">
+                <div class="washington_icon">
+                    <i class="far fa-landmark"></i>
+                </div>
+                <div class="title">
+                    welcome to washington, DC
+                </div>
+    
+            </div>
+            <div class="article_heading">
+                <h2>You can find all the best things to do right here in DC!</h2>
+            </div>
+            <div class="article">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae optio vero iusto error mollitia nulla in quod, incidunt ipsum maiores repellat, quidem quasi cumque enim. Provident dolorem pariatur omnis saepe!</p>
+            </div>
+            <button class="button"> 
+                Start Planning
+            </button>
+        </div>
+        <div class="image_section">
+            <img src="./images/Band_Mural_Header-small.jpg">
+        </div>
+    </div>
+
+    <div class="third_section">
+        
+        <img class="image" src="./images/assignement-design-reference.png">
+        
+        <div class="description">
+            <div class="feature_wrapper">
+                <div class="feature_icon">
+                    <i class="fal fa-podium-star"></i>
+                </div>
+                <div class="section_heading">
+                    featured events
+                </div>
+            </div>
+           
+            <div class="title">
+                Here's whats going on in washington, DC
+            </div>
+            <div class="title_description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Consectetur perferendis dolorem ducimus, et earum officiis nobis repellat.
+                 Repellendus, earum magnam eligendi, sunt aliquam fugit ut labore itaque cumque veniam totam!
+            </div>
+            <div class="link_wrapper">
+                <button class="button">view all events</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="fourth_section">
+        <div class="wrapper">
+            <div class="title">
+                locally experience the local hangouts locals love
+            </div>
+            <button>
+                see more
+            </button>
+        </div>
+        <div class="image_gallery">
+            <div class="image_wrapper">
+                
+                    <img class="gradient_image" src="https://washington.org/sites/default/files/styles/what_s_local_love_large_1050_x_940/public/thumb_100-free-things_family-on-the-national-mall_ddc-photo_800x800.jpg?h=fbf7a813&itok=oVRRSAye">
+                    <div class="text_oncard">
+                        <h2>100+ free things to do</h2>
+                        <p>take advantage of numerous free events</p>
+                    </div>
+                
+                    
+                        
+                
+                
+                <img src="https://washington.org/sites/default/files/styles/what_s_local_love_large_1050_x_940/public/2021-05/dc-skyline_jbflorez98_yesmydccool.jpg?h=4d22b034&itok=nRK7esE6">
+                <img src="https://washington.org/sites/default/files/styles/what_s_local_love_large_1050_x_940/public/2020-12/food_osteria_morini.jpg?h=5c8e2808&itok=9XudgWxp">
+            </div>
+            <!-- <div class="image_wrapper">
+                
+            </div>
+            <div class="image_wrapper">
+                <img src="../open_sense_test/images/56071799.jpg">
+            </div> -->
+        </div>
+
+    </div>
+
+    <div class="fifth_section">
+        <div class="title_wrapper">
+            <div class="explore_icon">
+                <i class="fas fa-binoculars"></i>
+            </div>
+            <div class="explore_title">
+                get exploring
+            </div>
+        </div>
+
+        <div class="article_container">
+            <div class="article_wrapper">
+                <div class="title">
+                    from concerts to cultural events to American history, free attractions and so much more.
+                </div>
+                <div class="article">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut odit in reiciendis perferendis rem laboriosam consectetur aut.
+        
+                </div>
+            </div>
+            
+            <button class="">
+                so much more
+            </button>
+        </div>
+        <div class="image_wrapper">
+            <img src="./images/date.png">
+            <div class="first_row_images">
+                    <img src="./images/img1.png">
+                    <img src="./images/img1.png">
+                </div>
+                <div class="second_row_images">
+                    <img src="./images/img1.png">
+                    <img src="./images/img1.png">
+                </div>
+                
+            </div>
+        </div>
+        
+       
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        var thumbIndex = 1;
+
+        const zeroPad = (num, places) => String(num).padStart(places, '0')
+
+        function changeSlide(n) {
+        setImgSrc(n);
+        setThumbSrc(n)
+        }
+
+        function setImgSrc(index) {
+        // update the slide index first
+        slideIndex += index
+
+        if (slideIndex >= images.length) {
+            slideIndex = 0
+        }
+        if (slideIndex < 0) {
+            slideIndex = images.length -1
+        }
+
+            // set the src attribute
+        var imgtag = document.getElementById("hero-img",)
+        imgtag.src = images[slideIndex]
+        }
+
+        function setThumbSrc(index) {
+        // update the slide index first
+        thumbIndex += index
+
+        if (thumbIndex >= images.length) {
+            thumbIndex = 0
+        }
+        if (thumbIndex < 0) {
+            thumbIndex = images.length -1
+        }
+
+        // set the src attribute
+        var imgtag = document.getElementById("thumb-img")
+        imgtag.src = images[thumbIndex]
+        
+        var tmb = document.getElementById("thumb-caption")
+        tmb.innerHTML = "· " + zeroPad(thumbIndex+1, 2) + " ·"
+        }
+
+
+        var images = [
+        "https://images.unsplash.com/photo-1628239019751-ca690c91040b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
+        "https://images.unsplash.com/photo-1628243163801-7cd2bf509288?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
+        "https://images.unsplash.com/photo-1627986866461-983f4ecee2a4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+        ]
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+        setImgSrc(0);
+        setThumbSrc(0)
+        });
+                
+    </script>
+</body>
+</html>
