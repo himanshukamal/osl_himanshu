@@ -372,11 +372,32 @@ img#hero-img {
   width: 200px;
   height: 100px;
 }
-.fifth_section .image_wrapper .card_wrapper .card h4 {
-  text-align: center;
+.fifth_section .image_wrapper .card_wrapper .card .icon_text_wrapper {
+  display: flex;
+}
+.fifth_section .image_wrapper .card_wrapper .card .icon_text_wrapper .title_wrapper {
+  display: flex;
+}
+.fifth_section .image_wrapper .card_wrapper .card .icon_text_wrapper .title_wrapper .camera_icon {
+  color: purple;
+  margin-left: 15px;
+  margin-top: 1px;
+}
+.fifth_section .image_wrapper .card_wrapper .card .icon_text_wrapper .title_wrapper h4 {
+  text-align: left;
+  margin: 0 15px;
+  font-family: "Playfair Display";
+  font-style: italic;
+  text-transform: capitalize;
+  color: #2a578fd1;
+  font-size: 15px;
+  text-transform: capitalize;
 }
 .fifth_section .image_wrapper .card_wrapper .card p {
-  text-align: center;
+  text-align: left;
+  font-family: "Poppins";
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
 /* On smaller screens, decrease text size */
