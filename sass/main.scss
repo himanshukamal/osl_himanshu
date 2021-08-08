@@ -117,7 +117,13 @@ button {
   .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
-  
+  .nav_icon {
+      position: fixed;
+      top: 1em;
+      left: 1em;
+      width: 100px;
+      color: white;
+  }
   /* Caption text */
   .text {
     color: #f2f2f2;
@@ -412,24 +418,31 @@ button {
                display: flex;
                margin: 10px;
                img {
-                   width: 450px;
-
+                    width: 583px;
+                    margin: 3em 2em;
                }
-               .first_row_images {
-                   display: flex;
-                   img {
-                       width: 100px;
+               .card_wrapper {
+                // width: 257px;
+                .card{
+                    margin: 10px;
+                       img {
+                           width: 200px;
+                           height: 100px;
+                       }
+                       h4 {
+                           text-align: center;
+                       }
+                       p {
+                           text-align: center;
+                       }
                    }
-                .second_row_images{
-                    img {
-                        width: 100px;
-                        
-                    }
-                }   
                }
-           }
+               
+               
+               }
            
-       }   
+            }           
+          
       
   
   
