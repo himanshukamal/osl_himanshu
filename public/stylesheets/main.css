@@ -304,18 +304,26 @@ button:hover:after {
 .third_section figure figcaption {
   display: flex;
 }
-.third_section figure figcaption .tag_line {
+.third_section figure figcaption .tag_line_wrapper {
   position: absolute;
+  left: 50%;
   bottom: 0;
-  font-size: 24px;
+}
+.third_section figure figcaption .tag_line_wrapper .container {
   background: #fff;
+  position: relative;
+  left: -50%;
+  bottom: 0;
+}
+.third_section figure figcaption .tag_line_wrapper .container .tag_line {
+  font-size: 24px;
   text-transform: capitalize;
   padding: 0.7em 2em 0em;
   margin: 0;
   font-family: "Poppins";
   height: 3em;
 }
-.third_section figure figcaption .sponser {
+.third_section figure figcaption .tag_line_wrapper .container .sponser {
   font-size: 13px;
   color: #c2c2c2;
   text-transform: uppercase;
@@ -354,16 +362,23 @@ button:hover:after {
 }
 .third_section .feature_info {
   max-width: 40%;
+  width: 100%;
+  position: relative;
 }
-.third_section .feature_info .feature_wrapper {
+.third_section .feature_info .feature_info_content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.third_section .feature_info .feature_info_content .feature_wrapper {
   display: flex;
   margin-left: 20px;
 }
-.third_section .feature_info .feature_wrapper .feature_icon {
+.third_section .feature_info .feature_info_content .feature_wrapper .feature_icon {
   color: purple;
   font-size: 24px;
 }
-.third_section .feature_info .feature_wrapper .section_heading {
+.third_section .feature_info .feature_info_content .feature_wrapper .section_heading {
   font-family: "Playfair Display";
   font-style: italic;
   text-transform: capitalize;
@@ -373,13 +388,13 @@ button:hover:after {
   letter-spacing: 1px;
   line-height: 36px;
 }
-.third_section .feature_info .title {
+.third_section .feature_info .feature_info_content .title {
   font-family: "Poppins";
   font-size: 1.6em;
   font-weight: bold;
   margin-left: 20px;
 }
-.third_section .feature_info .title_description {
+.third_section .feature_info .feature_info_content .title_description {
   font-family: "Poppins";
   font-size: 14px;
   letter-spacing: 1.05px;
@@ -462,6 +477,10 @@ button:hover:after {
   transition: all 0.3s ease-in-out;
 }
 
+.fifth_section {
+  max-width: 1480px;
+  margin: 2em auto 0;
+}
 .fifth_section .heading_wrapper {
   display: flex;
   margin-left: 8.9em;

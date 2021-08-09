@@ -297,24 +297,32 @@ button:hover:after {
         }
         figcaption {
             display: flex;
-            .tag_line {
+            .tag_line_wrapper {
                 position: absolute;
+                left: 50%;
                 bottom: 0;
-                font-size: 24px;
-                background: #fff;
-                text-transform: capitalize;
-                padding: 0.7em 2em 0em;
-                margin: 0;
-                font-family: "Poppins";
-                height: 3em;
-            }
-            .sponser {
-                font-size: 13px;
-                color: #c2c2c2;
-                text-transform: uppercase;
-                display: block;
-                text-align: center;
-                font-weight: bold;
+                .container {
+                    background: #fff;
+                    position: relative;
+                    left: -50%;
+                    bottom: 0;
+                    .tag_line {
+                        font-size: 24px;
+                        text-transform: capitalize;
+                        padding: 0.7em 2em 0em;
+                        margin: 0;
+                        font-family: "Poppins";
+                        height: 3em;
+                    }
+                    .sponser {
+                        font-size: 13px;
+                        color: #c2c2c2;
+                        text-transform: uppercase;
+                        display: block;
+                        text-align: center;
+                        font-weight: bold;
+                    }
+                }
             }
             .date_time {
                 color: #fff;
@@ -345,50 +353,59 @@ button:hover:after {
                     text-align: center;
                 }
             }
-
+            
         }
         
-
+        
     }
     .feature_info {
         max-width: 40%;
-        .feature_wrapper {
-            display: flex;
-            margin-left: 20px;
-            .feature_icon {
-                color: purple;
-                font-size: 24px;
-            }
-            .section_heading{
-                font-family: 'Playfair Display';
-                font-style: italic;
-                text-transform: capitalize;
-                color: #2a578fd1;
-                margin-left: 10px;
-                font-size: 20px;
-                letter-spacing: 1px;
-                line-height: 36px;
-            }
-        }
-        .title {
-            font-family: 'Poppins';
-            font-size: 1.6em;
-            font-weight: bold;
-            margin-left: 20px;
+        width: 100%;
+        position: relative;
+        .feature_info_content {
+            position: absolute;
+            left: 0;
+            bottom: 0;
             
-        }       
-        .title_description {
-            font-family: "Poppins";
-            font-size: 14px;
-            letter-spacing: 1.05px;
-            margin-top: 15px;
-            line-height: 28px;
-            font-weight: 400;
-            text-shadow: 0 0 32px rgb(34 34 34 / 20%);
-            color: #777;
-            margin-left: 20px;
+            .feature_wrapper {
+                display: flex;
+                margin-left: 20px;
+                .feature_icon {
+                    color: purple;
+                    font-size: 24px;
+                }
+                .section_heading{
+                    font-family: 'Playfair Display';
+                    font-style: italic;
+                    text-transform: capitalize;
+                    color: #2a578fd1;
+                    margin-left: 10px;
+                    font-size: 20px;
+                    letter-spacing: 1px;
+                    line-height: 36px;
+                }
+            }
+            .title {
+                font-family: 'Poppins';
+                font-size: 1.6em;
+                font-weight: bold;
+                margin-left: 20px;
+                
+            }       
+            .title_description {
+                font-family: "Poppins";
+                font-size: 14px;
+                letter-spacing: 1.05px;
+                margin-top: 15px;
+                line-height: 28px;
+                font-weight: 400;
+                text-shadow: 0 0 32px rgb(34 34 34 / 20%);
+                color: #777;
+                margin-left: 20px;
+            }
         }
     }
+    
     .link_wrapper {
         display: flex;
         margin-top: 3em;
@@ -474,6 +491,8 @@ button:hover:after {
 
 
 .fifth_section {
+    max-width: $section_max_width;
+    margin: 2em auto 0;
     .heading_wrapper {
         display: flex;
         margin-left: 8.9em;
