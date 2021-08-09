@@ -186,6 +186,7 @@ button:hover:after {
 
 .slideshow-controls {
     display: flex;
+    flex-direction: row-reverse;
     .slideshow-arrows {
         max-width: 119px;
         height: 62px;
