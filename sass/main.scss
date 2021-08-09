@@ -544,29 +544,35 @@ button:hover:after {
             margin-top: 8em;
         }
     }
-    .image_wrapper {
+    .sixth_section {
         display: flex;
         margin: 10px;
-        img {
-            width: 583px;
-            margin: 3em 2em;
+        .highlight {
+            width: 50%;
+            img {
+                width: 100%;
+
+            }
         }
-        .card_wrapper {
-            // width: 257px;
+        .grid {
+            display: grid;
+            grid-template-columns: auto auto;
+            width: 50%;
+            padding: 0em 3em;
             .card{
                 margin: 10px;
                 img {
-                    width: 200px;
-                    height: 100px;
+                    width: 100%;
+                    height: 200px;
+                    max-height: 200px;
                 }
                 .icon_text_wrapper{
                     display: flex;
                     .title_wrapper {
                         display: flex;
+                        margin-top: 10px;
                         .camera_icon {
                             color: purple;
-                            margin-left: 15px;
-                            margin-top: 1px;
                         }
                         h4 {
                             text-align: left;
@@ -591,10 +597,7 @@ button:hover:after {
                 }
             }
         }
-        
-        
     }
-    
 }           
 
 
