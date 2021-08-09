@@ -29,22 +29,38 @@
                 </div>
                 
                 <div class="hero_title">
-                    <h1 class="header">Discover the real DC</h1>
-                    <p class="header_description">Awe inspiring. Heart thumping. Mind Changing. Discover something new and you will feel alive, too.</p>
+                    <h1 class="header">Discover the Real DC</h1>
+                    <p class="header_description">Awe inspiring. Heart thumping. Mind Changing. Discover something new and you will feel alive, too.
+                        <a href="https://www.washington.org/experiencedc">
+                            see more
+                            &#10095
+                        </a>
+                    </p>
+                    <p class="arrow_down">
+                        <span>&raquo;</span>
+                    </p>
+
                 </div>
                 
             </div>
         </div>
-        
-        <div class="slideshow-arrows">
-            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    
+        <div class=slideshow-controls>
+            <div class="slideshow-arrows">
+                <div class="arrow_parent">
+                    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                </div>
+            </div>
             <div class="thumbnail fade">
                 <figure>
-                    <img id="thumb-img" src="" style="width:100%">
-                    <figcaption id="thumb-caption"></figcaption>
+                    <img id="thumb-img" src="">
+                    <figcaption>
+                        <div id="thumb-caption"></div>
+                    </figcaption>
                 </figure>
             </div>
+            <div class="current_slide_indicator">01-05</div>
         </div>
         
         <div class="second_section">
