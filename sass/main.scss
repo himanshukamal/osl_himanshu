@@ -74,23 +74,22 @@ body {
 
 
 button {
-    border: solid 2px #7D3269;
     background-color: #fff;
-    color: #7D3269;
     border-radius: 0;
-    display: inline-block;
-    vertical-align: middle;
-    transform: perspective(1px) translateZ(0);
-    position: relative;
-    transition-property: color;
-    transition-duration: 0.4s;
-    overflow: hidden;
+    border: solid 2px #7D3269;
+    color: #7D3269;
     cursor: pointer;
-    padding: 0.5rem;
+    display: inline-block;
     font-family: "Poppins";
-    text-transform: uppercase;
     font-size: large;
-    
+    overflow: hidden;
+    padding: 0.5rem 2rem;
+    position: relative;
+    text-transform: uppercase;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.4s;
+    transition-property: color;
+    vertical-align: middle; 
 }
 
 button span {
@@ -123,9 +122,16 @@ button:hover:after {
     max-height: 100vh;
     margin: auto;
     
-    img#hero-img {
+    #hero-img {
+        height: 100vh;
         max-height: 100vh;
-        width:100%
+        width:100%;
+        background: no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        
     }
     
     /* Caption text */
@@ -240,7 +246,7 @@ button:hover:after {
             #thumb-img {
                 position: absolute;
                 left: 0;
-                bottom: -1px;
+                bottom: 0;
                 max-width: 200px;
                 z-index: 10;
             }
@@ -262,12 +268,22 @@ button:hover:after {
         }    
     }
     .current_slide_indicator {
-        width: 8em;
+        width: 6em;
         height: 62px;
-        background-color: #777;
+        padding: 4px;
+        background-color:#222222;
         font-family: 'Playfair Display';
         font-style: italic;
-        font-size: 25px;
+        text-align: center;
+        
+        #current_index {
+            font-size: 32px;
+            color: #fff;
+        }
+        #max_index {
+            font-size: 16px;
+            color: #959595;
+        }
     }
 }
 
@@ -546,20 +562,25 @@ button:hover:after {
     .image_gallery {
         .image_wrapper{
             display: flex;
-            margin-top: 30px;
-            position: relative;
-            overflow-x: hidden;
-            img {
+            .gallery_item {
                 width: 33%;
-                height: 100vh;
-                transition: all .2s ease-in-out;
-                // overflow: hidden;
-                
+                // height: 570px;
+                // background: no-repeat center center fixed; 
+                // -webkit-background-size: cover;
+                // -moz-background-size: cover;
+                // -o-background-size: cover;
+                // background-size: cover;
+                img {
+                    height: 770px;
+                    width: 100%;
+                    min-height: 100%;
+                    max-height: 770px;
+                }
             }
             :hover {
-                width: 40%;
-                transition: all .3s ease-in-out;
-                
+                // background: linear-gradient(to top, #e83e8c 0%, transparent 100%);
+                width: 50%;
+                transition: all 1s ease-in-out;
             }
         }
     }

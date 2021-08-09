@@ -10,7 +10,7 @@
 <body>
     <div class="slideshow-container">
         <div class="fade">
-            <img id="hero-img">
+            <header id="hero-img"></header>
             <nav class="nav_wrapper">
                 <div class="nav_icon">
                     <img src="https://washington.org/themes/custom/washington/images/logo.svg">
@@ -44,12 +44,15 @@
     </div>
     
     <div class=slideshow-controls>
-        <div class="current_slide_indicator">01-05</div>
+        <div class="current_slide_indicator">
+            <span id="current_index"></span>
+            <span id="max_index"></span>
+        </div>
         <div class="thumbnail fade">
             <figure>
                 <img id="thumb-img" src="">
                 <figcaption>
-                    <div id="thumb-caption"></div>
+                    <p id="thumb-caption"></p>
                 </figcaption>
             </figure>
         </div>
@@ -167,20 +170,28 @@
         </div>
         <div class="image_gallery">
             <div class="image_wrapper">
-                <img  src="https://washington.org/sites/default/files/styles/what_s_local_love_large_1050_x_940/public/thumb_100-free-things_family-on-the-national-mall_ddc-photo_800x800.jpg?h=fbf7a813&itok=oVRRSAye">
-                <!-- <div class="text_oncard">
-                    <h2>100+ free things to do</h2>
-                    <p>take advantage of numerous free events</p>
-                </div> -->
-                <img src="https://washington.org/sites/default/files/styles/what_s_local_love_large_1050_x_940/public/2021-05/dc-skyline_jbflorez98_yesmydccool.jpg?h=4d22b034&itok=nRK7esE6">
-                <img src="https://washington.org/sites/default/files/styles/what_s_local_love_large_1050_x_940/public/2020-12/food_osteria_morini.jpg?h=5c8e2808&itok=9XudgWxp">
+                <div id="gall_item_1" class="gallery_item">
+                    <img src="https://washington.org/sites/default/files/styles/what_s_local_love_large_1050_x_940/public/thumb_100-free-things_family-on-the-national-mall_ddc-photo_800x800.jpg?h=fbf7a813&itok=oVRRSAye">
+                    <p class="info">
+                        <p class="title">Rooftop</p>
+                        <p class="description"></p>
+                    </p>
+                </div>
+                <div id="gall_item_2" class="gallery_item">
+                    <img src="https://washington.org/sites/default/files/styles/what_s_local_love_large_1050_x_940/public/2021-05/dc-skyline_jbflorez98_yesmydccool.jpg?h=4d22b034&itok=nRK7esE6">
+                    <p class="info">
+                        <p class="title">Dining</p>
+                        <p class="description"></p>
+                    </p>
+                </div>
+                <div id="gall_item_3" class="gallery_item">
+                    <img src="https://washington.org/sites/default/files/styles/what_s_local_love_large_1050_x_940/public/2020-12/food_osteria_morini.jpg?h=5c8e2808&itok=9XudgWxp">
+                    <p class="info">
+                        <p class="title">Discover</p>
+                        <p class="description"></p>
+                    </p>
+                </div>
             </div>
-            <!-- <div class="image_wrapper">
-                
-            </div>
-            <div class="image_wrapper">
-                <img src="../open_sense_test/images/56071799.jpg">
-            </div> -->
         </div>
         
     </div>
@@ -304,9 +315,13 @@
                 slideIndex = images.length -1
             }
             
-            // set the src attribute
-            var imgtag = document.getElementById("hero-img",)
-            imgtag.src = images[slideIndex]
+            // update the slideshow hero image
+            var $hero = $('#hero-img');
+            $hero.css('background-image', 'url(' + images[slideIndex] + ')');
+            
+            // update the current slide index
+            var $current = $("#current_index");
+            $current.text(zeroPad(slideIndex+1, 2));
         }
         
         function setThumbSrc(index) {
@@ -314,37 +329,44 @@
             thumbIndex += index
             
             if (thumbIndex >= images.length) {
-                thumbIndex = 0
+                thumbIndex = 0;
             }
             if (thumbIndex < 0) {
-                thumbIndex = images.length -1
+                thumbIndex = images.length -1;
             }
             
-            // set the src attribute
-            var imgtag = document.getElementById("thumb-img")
-            imgtag.src = images[thumbIndex]
-            
-            var tmb = document.getElementById("thumb-caption")
-            tmb.innerHTML = "· " + zeroPad(thumbIndex+1, 2) + " ·"
+            // set the thumb src attribute
+            var $tmb = $("#thumb-img");
+            $tmb.attr("src", images[thumbIndex]);
+
+            // update the thumbnail index indicator
+            var $tmbc = $("#thumb-caption");
+            $tmbc.text("· " + zeroPad(thumbIndex+1, 2) + " ·")
         }
         
         
         var images = [
+        "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80",
+        "https://images.unsplash.com/photo-1501612780327-45045538702b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+        "https://images.unsplash.com/photo-1481886756534-97af88ccb438?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80",
         "https://images.unsplash.com/photo-1628239019751-ca690c91040b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
         "https://images.unsplash.com/photo-1628243163801-7cd2bf509288?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
-        "https://images.unsplash.com/photo-1627986866461-983f4ecee2a4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
-        ]
+        "https://images.unsplash.com/photo-1627986866461-983f4ecee2a4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
+        ];
         
         
         document.addEventListener("DOMContentLoaded", function() {
             setImgSrc(0);
-            setThumbSrc(0)
+            setThumbSrc(0);
+                        
+            // update max index slide indicator
+            var $mi = $("#max_index");
+            $mi.text(zeroPad(images.length, 2))
+            
         });
-        
         
         $(document).scroll(function () {
             var $nav = $(".nav_wrapper");
-            console.log('scrolled')
             $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
         });
         
