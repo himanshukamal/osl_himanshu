@@ -6,6 +6,10 @@
 @import "../sass/abstracts/mixins.scss";
 
 
+// variables 
+$section_max_width: 1480px;
+
+
 * {
     box-sizing: border-box;
 }
@@ -228,6 +232,8 @@ button:hover:after {
 
 .second_section {
     display: flex;
+    max-width: $section_max_width;
+    margin: 2em auto 0;
     .text_section {
         margin: 3.8em;
         padding: 3.4em;
@@ -263,28 +269,89 @@ button:hover:after {
         text-shadow: 0 0 32px rgb(34 34 34 / 20%);
         color: #777;
     }
-}
-.image_section {
-    
-    img {
-        width: 400px;
-        padding: 8em 3em 4em 0em;
-        &:hover {
-            -ms-transform: scale(.9); /* IE 9 */
-            -webkit-transform: scale(.9); /* Safari 3-8 */
-            transform: scale(.9);
+    .image_section {
+        
+        img {
+            width: 400px;
+            padding: 8em 3em 4em 0em;
+            &:hover {
+                -ms-transform: scale(.9); /* IE 9 */
+                -webkit-transform: scale(.9); /* Safari 3-8 */
+                transform: scale(.9);
+            }
         }
+        
     }
-    
 }
 
 .third_section {
     display: flex;
-    img {
-        width: 486px;
-        margin: 1em 4em;
+    max-width: $section_max_width;
+    margin: 2em auto 0;
+    figure {
+        max-width: 60%;
+        position: relative;
+        img {
+            width: 100%;
+            // margin: 0 4em;
+        }
+        figcaption {
+            display: flex;
+            .tag_line {
+                position: absolute;
+                bottom: 0;
+                font-size: 24px;
+                background: #fff;
+                text-transform: capitalize;
+                padding: 0.7em 2em 0em;
+                margin: 0;
+                font-family: "Poppins";
+                height: 3em;
+            }
+            .sponser {
+                font-size: 13px;
+                color: #c2c2c2;
+                text-transform: uppercase;
+                display: block;
+                text-align: center;
+                font-weight: bold;
+            }
+            .date_time {
+                color: #fff;
+                position: absolute;
+                bottom: 17px;
+                right: 0;
+                margin-right: 26px;
+                .month{
+                    font-family: "Poppins";
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin: 0;
+                    text-align: center;
+                }
+                .day {
+                    font-family: "Playfair Display";
+                    font-style: italic;
+                    font-size: 72px;
+                    margin: 0;
+                    text-align: center;
+                    line-height: 69px;
+                }
+                .year {
+                    font-family: "Poppins";
+                    font-weight: bold;
+                    font-size: 16px;
+                    margin: 0;
+                    text-align: center;
+                }
+            }
+
+        }
+        
+
     }
-    .description {
+    .feature_info {
+        max-width: 40%;
         .feature_wrapper {
             display: flex;
             margin-left: 20px;
@@ -324,11 +391,10 @@ button:hover:after {
     }
     .link_wrapper {
         display: flex;
-        margin-left: 4em;
-        margin-top: 5em;
+        margin-top: 3em;
         .next_prev_wrapper{
             display: flex;
-            margin: 0em 3em;
+            margin: 0em 1.5em;
             .previous, .next_button{
                 z-index: 999;
                 border: 2px solid #7D3269;
@@ -348,12 +414,16 @@ button:hover:after {
                     border-radius: 0 3px 3px 0;
                     color: #7D3269;
                     font-size: 25px;
-                    padding: 2px 9px;
+                    padding: 2px 11px;
                 }
             }
         }
         .next_button {
-            margin-left: 2em;
+            margin-left: 1em;
+        }
+        .button {
+            margin-left: 1em;
+            padding: 0px 25px;
         }   
     }
 }
