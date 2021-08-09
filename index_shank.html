@@ -3,161 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="./sass/app.css">
+    <link rel="stylesheet" type="text/css" href="./public/stylesheets/main.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./public/stylesheets/abstracts/mixins.css">
+    <link rel="stylesheet" type="text/css" href="./public/stylesheets/fonts/fonts.css"> -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <!-- <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Verdana, sans-serif;
-            margin: 0;
-        }
-
-
-        img {
-            vertical-align: middle;
-        }
-
-        /* Slideshow container */
-        .slideshow-container {
-            /* max-width: 1000px; */
-            position: relative;
-            max-height: 100%;
-            margin: auto;
-        }
-        img#hero-img {
-            max-height: 100vh;
-        }
-
-        .slideshow-arrows {
-            max-width: 100px;
-            position: relative;
-            margin: auto;
-            margin-right: 200px;
-            height: 50px;
-            background: #933e9d;
-            /* text-align: right; */
-        }
-
-        /* Next & previous buttons */
-        .prev,
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 0%;
-            width: auto;
-            padding: 16px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-        }
-
-        /* Position the "next button" to the right */
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        /* On hover, add a black background color with a little bit see-through */
-        .prev:hover,
-        .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        /* Caption text */
-        .text {
-            color: #f2f2f2;
-            font-size: 24px;
-            padding: 8px 12px;
-            position: absolute;
-            bottom: 8px;
-            width: 100%;
-            text-align: left;
-        }
-
-        #thumb-caption {
-            display: inline-block;
-            /* text-align: center; */
-            color: #f2f2f2;
-            font-size: 20px;
-            padding: 8px 12px;
-            position: absolute;
-            bottom: 0;
-            /* margin: auto; */
-            left: 40%;
-        }
-
-        /* The dots/bullets/indicators */
-        .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
-
-        .active,
-        .dot:hover {
-            background-color: #222;
-        }
-
-        /* Fading animation */
-        .fade {
-            -webkit-animation-name: fade;
-            -webkit-animation-duration: 1.5s;
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-
-        .thumbnail {
-            width: 200px;
-            position: absolute;
-            left: 100%;
-            bottom: 0px;
-        }
-
-        .thumbnail figure {
-            margin: 0;
-        }
-
-        @-webkit-keyframes fade {
-        from {
-            opacity: .4;
-        }
-
-        to {
-            opacity: 1;
-        }
-        }
-
-        @keyframes fade {
-        from {
-            opacity: .4;
-        }
-
-        to {
-            opacity: 1;
-        }
-        }
-
-
-        /* On smaller screens, decrease text size */
-        @media only screen and (max-width: 300px) {
-            .prev,
-            .next,
-            .text {
-                font-size: 11px
-            }
-        }
-    </style> -->
+    
 </head>
 <body>
     <div class="slideshow-container">
@@ -178,7 +28,7 @@
                 </div>
             </div>
             
-            <div class="text">
+            <div class="hero_title">
                 <h1 class="header">Discover the real DC</h1>
                 <p class="header_description">Awe inspiring. Heart thumping. Mind Changing. Discover something new and you will feel alive, too.</p>
             </div>
@@ -225,7 +75,7 @@
 
     <div class="third_section">
         
-        <img class="image" src="./images/assignement-design-reference.png">
+        <img class="image" src="https://www.washington.org/sites/default/files/styles/featured_event_v2_845_x_528/public/8-6-Art-Chat_4D61614F-B099-4C01-B6DD3BE280179CD5_a56e2eb4-5062-4bd7-9b5b01f7bf017ee7.jpg?h=b197397c&itok=d3iK8VB7">
         
         <div class="description">
             <div class="feature_wrapper">
@@ -246,6 +96,20 @@
                  Repellendus, earum magnam eligendi, sunt aliquam fugit ut labore itaque cumque veniam totam!
             </div>
             <div class="link_wrapper">
+                <div class="next_prev_wrapper">
+                    <div class="previous ">
+                        <div class="arrows">
+                            &#10094;
+                        </div>
+                       
+                    </div>
+                    <div class="next_button arrow">
+                        <div class="arrows">
+                            &#10095;
+                        </div>
+                        
+                    </div>
+                </div>
                 <button class="button"><span>view all events</span></button>
             </div>
         </div>
@@ -265,17 +129,11 @@
         </div>
         <div class="image_gallery">
             <div class="image_wrapper">
-                
-                    <img class="gradient_image" src="https://washington.org/sites/default/files/styles/what_s_local_love_large_1050_x_940/public/thumb_100-free-things_family-on-the-national-mall_ddc-photo_800x800.jpg?h=fbf7a813&itok=oVRRSAye">
-                    <div class="text_oncard">
+                <img  src="https://washington.org/sites/default/files/styles/what_s_local_love_large_1050_x_940/public/thumb_100-free-things_family-on-the-national-mall_ddc-photo_800x800.jpg?h=fbf7a813&itok=oVRRSAye">
+                    <!-- <div class="text_oncard">
                         <h2>100+ free things to do</h2>
                         <p>take advantage of numerous free events</p>
-                    </div>
-                
-                    
-                        
-                
-                
+                    </div> -->
                 <img src="https://washington.org/sites/default/files/styles/what_s_local_love_large_1050_x_940/public/2021-05/dc-skyline_jbflorez98_yesmydccool.jpg?h=4d22b034&itok=nRK7esE6">
                 <img src="https://washington.org/sites/default/files/styles/what_s_local_love_large_1050_x_940/public/2020-12/food_osteria_morini.jpg?h=5c8e2808&itok=9XudgWxp">
             </div>
@@ -318,11 +176,11 @@
             </button>
         </div>
         <div class="image_wrapper">
-            <img src="./images/date.png">
+            <img src="https://washington-org.s3.amazonaws.com/s3fs-public/asialiu_colorful-dc-row-houses_yesmydccool.jpg">
             <div class="card_wrapper">
                 <div class="card">
                     <div class="card_image">
-                        <img src="images/img1.png">
+                        <img src="https://www.washington.org/sites/default/files/styles/dc_image_gallery_736_x_736/public/2021-08/georgetown_at-night_canaanrodriguezphotography_yesmydccool.jpg?h=d919810d&itok=1F0zJWaV">
                     </div>
                     <div class="icon_text_wrapper">
                         <div class="title_wrapper">
@@ -336,7 +194,7 @@
                 </div>
                 <div class="card">
                     <div class="card_image">
-                        <img src="images/img1.png">
+                        <img src="https://external.fdel59-1.fna.fbcdn.net/safe_image.php?d=AQHkiJ6WFSZui5Aa&w=500&h=261&url=https%3A%2F%2Fwashington.org%2Fsites%2Fdefault%2Ffiles%2F2021-05%2FCover_image_Sam_Kittner.jpg&cfs=1&ext=jpg&ccb=3-5&_nc_hash=AQG4HgRYOQ8Hqnrw">
                     </div>
                     <div class="icon_text_wrapper">
                         <div class="title_wrapper">
@@ -354,7 +212,7 @@
             <div class="card_wrapper">
                 <div class="card">
                     <div class="card_image">
-                        <img src="images/img1.png">
+                        <img src="https://external.fdel59-1.fna.fbcdn.net/safe_image.php?d=AQETfZ3Z_4GNajNf&w=500&h=261&url=https%3A%2F%2Fwashington.org%2Fsites%2Fdefault%2Ffiles%2F2021-01%2FSmithsonian_Castle.gif&cfs=1&ext=jpg&ccb=3-5&_nc_hash=AQGIL_GNQmPt_FrA">
                     </div>
                     <div class="icon_text_wrapper">
                         <div class="title_wrapper">
@@ -368,7 +226,7 @@
                 </div>
                 <div class="card">
                     <div class="card_image">
-                        <img src="images/img1.png">
+                        <img src="https://external.fdel59-1.fna.fbcdn.net/safe_image.php?d=AQEmnZml5Iu0Qbw5&w=500&h=261&url=https%3A%2F%2Fwashington.org%2Fsites%2Fdefault%2Ffiles%2F2021-07%2Frow-house_artyomshmatko_yesmydccool.jpg&cfs=1&ext=jpg&ccb=3-5&_nc_hash=AQHV5-0MoYBQI16u">
                     </div>
                     <div class="icon_text_wrapper">
                         <div class="title_wrapper">

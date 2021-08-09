@@ -3,6 +3,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+/*
+0 - 600px : Phone
+600 - 900px: Tablet Portrait
+900 - 1200px: Tablet landscape
+1200 - 1800 is where our normal styles apply
+1800px + : Big desktop
+
+
+*/
+/*
+$breakpoint argument choices:hover
+- phone
+- tab-port
+- big-desktop
+
+1em = 16px
+
+ORDER: Base + typography > general layout + grid > page layout > components
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  margin: auto 0;
+}
+
 button {
   border: solid 2px #7D3269;
   background-color: #fff;
@@ -46,45 +74,58 @@ button:hover:after {
   width: 100%;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Verdana, sans-serif;
-  margin: auto 0;
-}
-
-img {
-  vertical-align: middle;
-}
-
 /* Slideshow container */
 .slideshow-container {
   /* max-width: 1000px; */
   position: relative;
   max-height: 100vh;
   margin: auto;
+  /* Caption text */
 }
-
-img#hero-img {
+.slideshow-container img#hero-img {
   max-height: 100vh;
   width: 100%;
 }
-
-.slideshow-arrows {
-  max-width: 100px;
-  position: relative;
-  margin: auto;
-  margin-right: 200px;
-  height: 50px;
-  background: #222;
-  /* text-align: right; */
+.slideshow-container .hero_title {
+  color: #f2f2f2;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: left;
+  font-family: "Poppins", serif;
+}
+.slideshow-container .hero_title .header {
+  font-size: 70px;
+}
+@media (max-width: 37.5em) {
+  .slideshow-container .hero_title .header {
+    font-size: 20px;
+  }
+}
+.slideshow-container .hero_title .header_description {
+  letter-spacing: 1.05px;
+  margin-top: 15px;
+  line-height: 28px;
+  font-weight: 400;
+  text-shadow: 0 0 32px rgba(34, 34, 34, 0.2);
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
+.slideshow-arrows {
+  max-width: 119px;
+  position: relative;
+  margin: auto;
+  margin-right: 260px;
+  height: 62px;
+  background: #7D3269;
+  padding: 8px 6px;
+  /* text-align: right; */
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  /* On hover, add a black background color with a little bit see-through */
+}
+.slideshow-arrows .prev,
+.slideshow-arrows .next {
   cursor: pointer;
   position: absolute;
   top: 0%;
@@ -93,21 +134,39 @@ img#hero-img {
   color: white;
   font-weight: bold;
   font-size: 18px;
-  transition: 0.6s ease;
+  transition: 0.1s ease-in;
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
-
-/* Position the "next button" to the right */
-.next {
+.slideshow-arrows .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.slideshow-arrows .prev:hover,
+.slideshow-arrows .next:hover {
+  background-color: #7D3269;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.slideshow-arrows .thumbnail {
+  width: 200px;
+  position: absolute;
+  left: 100%;
+  bottom: 0px;
+}
+.slideshow-arrows .thumbnail figure {
+  margin: 0;
+}
+.slideshow-arrows .thumbnail figure #thumb-caption {
+  display: inline-block;
+  /* text-align: center; */
+  color: #f2f2f2;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0;
+  /* margin: auto; */
+  left: 40%;
 }
 
 .nav_wrapper {
@@ -120,68 +179,38 @@ img#hero-img {
 .nav_wrapper .nav_icon {
   width: 100px;
 }
+@media (max-width: 37.5em) {
+  .nav_wrapper .nav_icon {
+    width: 219px;
+  }
+}
 .nav_wrapper .nav_menu {
   color: white;
   padding: 0.8em 0.4em;
   font-size: 2em;
 }
+@media (max-width: 37.5em) {
+  .nav_wrapper .nav_menu {
+    font-size: 3.7em;
+  }
+}
 .nav_wrapper .star_icon {
   padding: 3.8em 0.4em;
   font-size: 0.6em;
+}
+@media (max-width: 37.5em) {
+  .nav_wrapper .star_icon {
+    font-size: 1.2em;
+  }
 }
 .nav_wrapper .search {
   font-size: 1.5em;
   padding: 1.1em 0.4em;
 }
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: left;
-  font-family: "Poppins", serif;
-}
-.text .header {
-  font-size: 70px;
-}
-.text .header_description {
-  letter-spacing: 1.05px;
-  margin-top: 15px;
-  line-height: 28px;
-  font-weight: 400;
-  text-shadow: 0 0 32px rgba(34, 34, 34, 0.2);
-}
-
-#thumb-caption {
-  display: inline-block;
-  /* text-align: center; */
-  color: #f2f2f2;
-  font-size: 20px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 0;
-  /* margin: auto; */
-  left: 40%;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-  background-color: #222;
+@media (max-width: 37.5em) {
+  .nav_wrapper .search {
+    font-size: 3.2em;
+  }
 }
 
 /* Fading animation */
@@ -190,17 +219,6 @@ img#hero-img {
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
-}
-
-.thumbnail {
-  width: 200px;
-  position: absolute;
-  left: 100%;
-  bottom: 0px;
-}
-
-.thumbnail figure {
-  margin: 0;
 }
 
 @-webkit-keyframes fade {
@@ -249,7 +267,7 @@ img#hero-img {
 }
 .second_section .article {
   font-family: "Poppins";
-  font-size: 21px;
+  font-size: 14px;
   letter-spacing: 1.05px;
   margin-top: 15px;
   line-height: 28px;
@@ -261,6 +279,13 @@ img#hero-img {
 .image_section img {
   width: 400px;
   padding: 8em 3em 4em 0em;
+}
+.image_section img:hover {
+  -ms-transform: scale(0.9);
+  /* IE 9 */
+  -webkit-transform: scale(0.9);
+  /* Safari 3-8 */
+  transform: scale(0.9);
 }
 
 .third_section {
@@ -296,7 +321,7 @@ img#hero-img {
 }
 .third_section .description .title_description {
   font-family: "Poppins";
-  font-size: 21px;
+  font-size: 14px;
   letter-spacing: 1.05px;
   margin-top: 15px;
   line-height: 28px;
@@ -307,10 +332,36 @@ img#hero-img {
 }
 .third_section .link_wrapper {
   display: flex;
-  margin-left: 20px;
+  margin-left: 4em;
+  margin-top: 5em;
 }
-.third_section .link_wrapper .button {
-  margin-top: 30px;
+.third_section .link_wrapper .next_prev_wrapper {
+  display: flex;
+  margin: 0em 3em;
+}
+.third_section .link_wrapper .next_prev_wrapper .previous, .third_section .link_wrapper .next_prev_wrapper .next_button {
+  z-index: 999;
+  border: 2px solid #7D3269;
+  opacity: 1;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  transition-property: color;
+  transition-duration: all 0.4s linear;
+  overflow: hidden;
+  cursor: pointer;
+}
+.third_section .link_wrapper .next_prev_wrapper .previous .arrows, .third_section .link_wrapper .next_prev_wrapper .next_button .arrows {
+  border-radius: 0 3px 3px 0;
+  color: #7D3269;
+  font-size: 25px;
+  padding: 2px 9px;
+}
+.third_section .link_wrapper .next_button {
+  margin-left: 2em;
 }
 
 .fourth_section .wrapper {
@@ -336,24 +387,16 @@ img#hero-img {
   display: flex;
   margin-top: 30px;
   position: relative;
+  overflow-x: hidden;
 }
 .fourth_section .image_gallery .image_wrapper img {
   width: 33%;
   height: 100vh;
   transition: all 0.2s ease-in-out;
-  overflow: hidden;
 }
 .fourth_section .image_gallery .image_wrapper :hover {
-  width: 50%;
-  transition: all 0.8s ease-in-out;
-  background: linear-gradient(to top, #e83e8c 50%, transparent 100%);
-}
-.fourth_section .image_gallery .image_wrapper .text_oncard {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  color: white;
-  font-family: "Poppins";
+  width: 40%;
+  transition: all 0.3s ease-in-out;
 }
 
 .fifth_section .heading_wrapper {
@@ -392,7 +435,7 @@ img#hero-img {
 }
 .fifth_section .article_container .article_wrapper .article {
   font-family: "Poppins";
-  font-size: 21px;
+  font-size: 14px;
   letter-spacing: 1.05px;
   margin-top: 15px;
   line-height: 28px;
@@ -454,8 +497,14 @@ img#hero-img {
   .prev,
 .next,
 .text {
-    font-size: 11px;
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  img#hero-img {
+    height: 90vh;
+    width: 100%;
   }
 }
 
-/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=main.css.map */
