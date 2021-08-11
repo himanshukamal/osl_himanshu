@@ -33,7 +33,12 @@ body {
     padding: 0.5em 0.5em;
     // navbar white color on scroll
     .nav_icon {
-        width: 100px;
+        width: 83px;
+        img {
+            filter: brightness(0) invert(1);
+        }
+       
+
         @include respond(phone) {
             width: 219px;
         }
@@ -41,7 +46,10 @@ body {
     .nav_menu {
         color: white;
         padding: 0.8em 0.4em;
-        font-size: 2em;
+        font-size: 1.5em;
+        cursor: pointer;
+        transition: 0.5s all;
+        margin-left: 16px;
         @include respond(phone) {
             font-size: 3.7em;
         }
@@ -54,8 +62,9 @@ body {
         }
     }
     .search {
-        font-size: 1.5em;
+        font-size: 1.4em;
         padding: 1.1em 0.4em;
+        cursor: pointer;
         @include respond(phone) {
             font-size: 3.2em;
             
@@ -64,6 +73,9 @@ body {
     &.scrolled {
         background-color: #fff !important;
         transition: background-color 200ms linear;
+        .nav_icon img {
+            filter: brightness(0.2) invert(0.4);
+        }
         .nav_menu {
             color: $brand_color;
         }

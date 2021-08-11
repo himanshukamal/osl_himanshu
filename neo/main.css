@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 /*
 0 - 600px : Phone
 600 - 900px: Tablet Portrait
@@ -531,42 +532,6 @@ button:hover:after {
   padding: 0px 25px;
 }
 
-.fourth_section .wrapper {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 6em;
-  margin-bottom: 4em;
-}
-.fourth_section .wrapper .title {
-  font-family: "Poppins";
-  font-size: 2.6em;
-  -webkit-font-smoothing: antialiased;
-  font-weight: bold;
-  width: 700px;
-  text-align: left;
-}
-.fourth_section .wrapper button {
-  height: 53px;
-  padding: 0em 3em;
-  margin-top: 3em;
-}
-.fourth_section .image_gallery .image_wrapper {
-  display: flex;
-}
-.fourth_section .image_gallery .image_wrapper .gallery_item {
-  width: 33%;
-}
-.fourth_section .image_gallery .image_wrapper .gallery_item img {
-  height: 770px;
-  width: 100%;
-  min-height: 100%;
-  max-height: 770px;
-}
-.fourth_section .image_gallery .image_wrapper :hover {
-  width: 50%;
-  transition: all 1s ease-in-out;
-}
-
 .fifth_section {
   max-width: 1269px;
   margin: 2em auto 0;
@@ -670,6 +635,139 @@ button:hover:after {
   font-family: "Poppins";
   font-weight: bold;
   text-transform: capitalize;
+}
+
+.sixth_section {
+  display: flex;
+  overflow: hidden;
+  margin-top: 2em;
+  /* Anchor will cover the whole item by default */
+}
+.sixth_section .grid {
+  width: 33%;
+}
+.sixth_section .grid:hover {
+  width: 50%;
+  transition: all 0.8s ease-in;
+}
+.sixth_section .grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 320px;
+  max-width: 5000px;
+  max-height: 770px;
+  width: 100%;
+  background: #3085a3;
+  text-align: center;
+  cursor: pointer;
+  background: linear-gradient(to top, black 100%, transparent 0%);
+}
+.sixth_section .grid figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
+  height: 770px;
+  object-fit: cover;
+}
+.sixth_section .grid figure figcaption {
+  /* padding: 0 1em; */
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.sixth_section .grid figure figcaption::before,
+.sixth_section .grid figure figcaption::after {
+  pointer-events: none;
+}
+.sixth_section .grid figure figcaption,
+.sixth_section .grid figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.sixth_section .grid figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+.sixth_section .grid figure h2 {
+  word-spacing: normal;
+  text-transform: capitalize;
+  font-family: "Poppins";
+  font-weight: 400;
+}
+.sixth_section .grid figure h2,
+.sixth_section .grid figure p {
+  margin: 0;
+  padding: 1em;
+}
+.sixth_section .grid figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+  font-family: "Poppins";
+  text-transform: capitalize;
+  font-size: large;
+}
+.sixth_section figure.effect-sadie figcaption::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(to bottom, rgba(255, 48, 131, 0.5) 20%, rgba(120, 0, 168, 0.7) 60%);
+  background: -moz-linear-gradient(to bottom, rgba(255, 48, 131, 0.5) 20%, rgba(120, 0, 168, 0.7) 60%);
+  background: -o-linear-gradient(to bottom, rgba(255, 48, 131, 0.5) 20%, rgba(120, 0, 168, 0.7) 60%);
+  background: linear-gradient(to bottom, rgba(255, 48, 131, 0.5) 20%, rgba(120, 0, 168, 0.7) 60%);
+  content: "";
+  opacity: 0;
+  -webkit-transform: translate3d(0, 50%, 0);
+  transform: translate3d(0, 50%, 0);
+}
+.sixth_section figure.effect-sadie h2 {
+  position: absolute;
+  bottom: 6%;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  -webkit-transition: -webkit-transform 0.35s, color 0.35s;
+  transition: transform 0.35s, color 0.35s;
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+.sixth_section figure.effect-sadie figcaption::before,
+.sixth_section figure.effect-sadie p {
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+.sixth_section figure.effect-sadie p {
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 10px, 0);
+  transform: translate3d(0, 10px, 0);
+}
+.sixth_section figure.effect-sadie:hover h2 {
+  color: #fff;
+  -webkit-transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+  transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+}
+.sixth_section figure.effect-sadie:hover figcaption::before,
+.sixth_section figure.effect-sadie:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 /* On smaller screens, decrease text size */
