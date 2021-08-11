@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./public/stylesheets/main.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="fade">
+            <header id="hero-img"></header>
+            <nav class="nav_wrapper">
+                <div class="nav_icon">
+                    <img src="https://washington.org/themes/custom/washington/images/logo.svg">
+                </div>
+                <div class="nav_menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="star_icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="search">
+                    <i class="fal fa-search"></i>
+                </div>
+            </nav>
+            
+            <div class="hero_title">
+                <h1 class="header">Discover the Real DC</h1>
+                <p class="header_description">Awe inspiring. Heart thumping. Mind Changing. Discover something new and you will feel alive, too.
+                    <a href="https://www.washington.org/experiencedc">
+                        see more
+                        &#10095
+                    </a>
+                </p>
+                <p class="arrow_down">
+                    <span>&raquo;</span>
+                </p>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class=slideshow-controls>
+        <div class="current_slide_indicator">
+            <span id="current_index"></span>
+            <span id="max_index"></span>
+        </div>
+        <div class="thumbnail fade">
+            <figure>
+                <img id="thumb-img" src="">
+                <figcaption>
+                    <p id="thumb-caption"></p>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="slideshow-arrows">
+            <div class="arrow_parent">
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+        </div>
+       
+        
+    </div>
+    
+    <div class="second_section">
+        <div class="text_section">
+            <div class="page_heading">
+                <div class="washington_icon">
+                    <i class="far fa-landmark"></i>
+                </div>
+                <div class="title">
+                    welcome to washington, DC
+                </div>
+                
+            </div>
+            <div class="article_heading">
+                <h2>You can find all the best things to do right here in DC!</h2>
+            </div>
+            <div class="article">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae optio vero iusto error mollitia nulla in quod, incidunt ipsum maiores repellat, quidem quasi cumque enim. Provident dolorem pariatur omnis saepe!</p>
+            </div>
+            <button class="button"> 
+                <span>Start Planning</span> 
+            </button>
+        </div>
+        <div class="image_section">
+            <img src="https://washington.org/sites/default/files/styles/featured_content_567_x_567/public/ckeditor-images/crowded-lincoln-memorial-plaza-in-summer_ddc-photo.jpg?h=827069f2&amp;itok=1s9j2QtQ">
+        </div>
+    </div>
+    
+    <div class="third_section">
+        <figure>
+            <img class="image" src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80">
+            <figcaption>
+                <div class="tag_line_wrapper">
+                    <div class="container">
+                        <p class="tag_line">
+                            Elephants and us: considering extinction
+                        </p>
+                        
+                        <p class="sponser">
+                            sponsered
+                        </p>
+                    </div>
+                </div>
+                <div class="date_time">
+                    <p class="month">Jun</p>
+                    <p class="day">28</p>
+                    <p class="year">2021</p>
+                </div>
+                
+                
+            </figcaption>
+        </figure>
+        
+        <div class="feature_info">
+            <div class="feature_info_content">
+                
+                <div class="feature_wrapper">
+                    <div class="feature_icon">
+                        <i class="fal fa-podium-star"></i>
+                    </div>
+                    <div class="section_heading">
+                        featured events
+                    </div>
+                </div>
+                
+                <div class="title">
+                    Here's whats going on in washington, DC
+                </div>
+                <div class="title_description">
+                    Discover the best things to do in Washington, DC, from events happening right now to annual festivals and so much more.
+                </div>
+                <div class="link_wrapper">
+                    <div class="next_prev_wrapper">
+                        <div class="previous ">
+                            <div class="arrows">
+                                &#10094;
+                            </div>
+                            
+                        </div>
+                        <div class="next_button arrow">
+                            <div class="arrows">
+                                &#10095;
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <button class="button"><span>view all events</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="sixth_section">
+        <div class="grid">
+            <figure class="effect-sadie">
+                <img src="https://washington.org/sites/default/files/styles/what_s_local_love_large_1050_x_940/public/thumb_100-free-things_family-on-the-national-mall_ddc-photo_800x800.jpg?h=fbf7a813&itok=oVRRSAye">
+            
+                <figcaption>
+                  <h2>100+ free things to do </h2>
+                  <p>take advantage of washington, DC's numerous free events , museums, tours, attractions and more </p>
+                  <a href="#">View more</a>
+                </figcaption>
+              </figure>
+    
+        </div>
+
+        <div class="grid">
+            <figure class="effect-sadie">
+                <img src="https://washington.org/sites/default/files/styles/what_s_local_love_large_1050_x_940/public/2021-05/dc-skyline_jbflorez98_yesmydccool.jpg?h=4d22b034&itok=nRK7esE6">
+            
+                <figcaption>
+                  <h2>30+ things to do this summer in washington ,DC </h2>
+                  <p>Summer rolls on with an increadable month of events in the nation's capital</p>
+                  <a href="#">View more</a>
+                </figcaption>
+              </figure>
+    
+        </div>
+
+        <div class="grid">
+            <figure class="effect-sadie">
+                <img src="https://washington.org/sites/default/files/styles/what_s_local_love_large_1050_x_940/public/2020-12/food_osteria_morini.jpg?h=5c8e2808&itok=9XudgWxp">
+            
+                <figcaption>
+                  <h2>places to eat and drink </h2>
+                  <p>Discover the best restaurant and bars in washington DC</p>
+                  <a href="#">View more</a>
+                </figcaption>
+              </figure>
+    
+        </div>
+    </div>
+    
+    <div class="fifth_section">
+        <div class="heading_wrapper">
+            <div class="explore_icon">
+                <i class="fas fa-binoculars"></i>
+            </div>
+            <div class="explore_title">
+                get exploring
+            </div>
+        </div>
+        
+        <div class="article_container">
+            <div class="article_wrapper">
+                <div class="title">
+                    from concerts to cultural events to American history, free attractions and so much more.
+                </div>
+                <div class="article">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut odit in reiciendis perferendis rem laboriosam consectetur aut.
+                    
+                </div>
+            </div>
+            
+            <button class="">
+                <span>
+                    so much more
+                </span>
+                
+            </button>
+        </div>
+        <div class="sixth_section">
+            <div class="highlight">
+                <img src="https://washington-org.s3.amazonaws.com/s3fs-public/asialiu_colorful-dc-row-houses_yesmydccool.jpg">
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <div class="card_image">
+                        <img src="https://www.washington.org/sites/default/files/styles/dc_image_gallery_736_x_736/public/2021-08/georgetown_at-night_canaanrodriguezphotography_yesmydccool.jpg?h=d919810d&itok=1F0zJWaV">
+                    </div>
+                    <div class="icon_text_wrapper">
+                        <div class="title_wrapper">
+                            <div class="camera_icon">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <h4>family travelers</h4>
+                        </div>
+                    </div>
+                    <p>free things to do family friendly</p>
+                </div>
+                <div class="card">
+                    <div class="card_image">
+                        <img src="https://external.fdel59-1.fna.fbcdn.net/safe_image.php?d=AQHkiJ6WFSZui5Aa&w=500&h=261&url=https%3A%2F%2Fwashington.org%2Fsites%2Fdefault%2Ffiles%2F2021-05%2FCover_image_Sam_Kittner.jpg&cfs=1&ext=jpg&ccb=3-5&_nc_hash=AQG4HgRYOQ8Hqnrw">
+                    </div>
+                    <div class="icon_text_wrapper">
+                        <div class="title_wrapper">
+                            <div class="camera_icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h4>Eclectic cultural travellers</h4>
+                        </div>
+                    </div>
+                    <p>15 ways to embrace spring colors</p>
+                </div>
+                <div class="card">
+                    <div class="card_image">
+                        <img src="https://external.fdel59-1.fna.fbcdn.net/safe_image.php?d=AQETfZ3Z_4GNajNf&w=500&h=261&url=https%3A%2F%2Fwashington.org%2Fsites%2Fdefault%2Ffiles%2F2021-01%2FSmithsonian_Castle.gif&cfs=1&ext=jpg&ccb=3-5&_nc_hash=AQGIL_GNQmPt_FrA">
+                    </div>
+                    <div class="icon_text_wrapper">
+                        <div class="title_wrapper">
+                            <div class="camera_icon">
+                                <i class="fas fa-leaf-maple"></i>
+                            </div>
+                            <h4>parks</h4>
+                        </div>
+                    </div>
+                    <p>13 things to see at dupont circle</p>
+                </div>
+                <div class="card">
+                    <div class="card_image">
+                        <img src="https://external.fdel59-1.fna.fbcdn.net/safe_image.php?d=AQEmnZml5Iu0Qbw5&w=500&h=261&url=https%3A%2F%2Fwashington.org%2Fsites%2Fdefault%2Ffiles%2F2021-07%2Frow-house_artyomshmatko_yesmydccool.jpg&cfs=1&ext=jpg&ccb=3-5&_nc_hash=AQHV5-0MoYBQI16u">
+                    </div>
+                    <div class="icon_text_wrapper">
+                        <div class="title_wrapper">
+                            <div class="camera_icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h4>historophiles</h4>
+                        </div>
+                    </div>
+                    <p>Exploring historic old town Alexandria</p>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+        
+        
+    </div>
+
+
+   
+    
+    <script>
+        var slideIndex = 0;
+        var thumbIndex = 1;
+        
+        const zeroPad = (num, places) => String(num).padStart(places, '0')
+        
+        function changeSlide(n) {
+            setImgSrc(n);
+            setThumbSrc(n)
+        }
+        
+        function setImgSrc(index) {
+            // update the slide index first
+            slideIndex += index
+            
+            if (slideIndex >= images.length) {
+                slideIndex = 0
+            }
+            if (slideIndex < 0) {
+                slideIndex = images.length -1
+            }
+            
+            // update the slideshow hero image
+            var $hero = $('#hero-img');
+            $hero.css('background-image', 'url(' + images[slideIndex] + ')');
+            
+            // update the current slide index
+            var $current = $("#current_index");
+            $current.text(zeroPad(slideIndex+1, 2));
+        }
+        
+        function setThumbSrc(index) {
+            // update the slide index first
+            thumbIndex += index
+            
+            if (thumbIndex >= images.length) {
+                thumbIndex = 0;
+            }
+            if (thumbIndex < 0) {
+                thumbIndex = images.length -1;
+            }
+            
+            // set the thumb src attribute
+            var $tmb = $("#thumb-img");
+            $tmb.attr("src", images[thumbIndex]);
+
+            // update the thumbnail index indicator
+            var $tmbc = $("#thumb-caption");
+            $tmbc.text("· " + zeroPad(thumbIndex+1, 2) + " ·")
+        }
+        
+        
+        var images = [
+        "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80",
+        "https://images.unsplash.com/photo-1501612780327-45045538702b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+        "https://images.unsplash.com/photo-1481886756534-97af88ccb438?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80",
+        "https://images.unsplash.com/photo-1628239019751-ca690c91040b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
+        "https://images.unsplash.com/photo-1628243163801-7cd2bf509288?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
+        "https://images.unsplash.com/photo-1627986866461-983f4ecee2a4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
+        ];
+        
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            setImgSrc(0);
+            setThumbSrc(0);
+                        
+            // update max index slide indicator
+            var $mi = $("#max_index");
+            $mi.text(zeroPad(images.length, 2))
+            
+        });
+        
+        $(document).scroll(function () {
+            var $nav = $(".nav_wrapper");
+            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+        
+        
+    </script>
+</body>
+</html>
