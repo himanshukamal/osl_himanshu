@@ -820,6 +820,39 @@ button:hover:after {
     
 }
 
+footer {
+    p {
+        flex-shrink: 0;
+        padding: 20px 10px;
+        color: #f2f2f2;
+        background-color: #030303;
+        text-align: center;
+        margin: 0;
+        font-family: 'Poppins';
+        .white_icon {
+            color: #fff;
+            font-size: 4em;
+            margin: 0.2em;
+        }
+        .github:hover {
+            color:darkgrey;
+        }
+        .html:hover {
+            color: rgb(221,77,37);
+        }
+        .css:hover {
+            color: rgb(0,108,180);
+        }
+        .fa:hover {
+            color: rgb(33,134,223);
+        }
+        .sass:hover {
+           color: rgb(199,100,148);
+        }
+
+    }
+}
+
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
     .prev,

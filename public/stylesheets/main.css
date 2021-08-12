@@ -782,6 +782,36 @@ button:hover:after {
   transform: translate3d(0, 0, 0);
 }
 
+footer p {
+  flex-shrink: 0;
+  padding: 20px 10px;
+  color: #f2f2f2;
+  background-color: #030303;
+  text-align: center;
+  margin: 0;
+  font-family: "Poppins";
+}
+footer p .white_icon {
+  color: #fff;
+  font-size: 4em;
+  margin: 0.2em;
+}
+footer p .github:hover {
+  color: darkgrey;
+}
+footer p .html:hover {
+  color: #dd4d25;
+}
+footer p .css:hover {
+  color: #006cb4;
+}
+footer p .fa:hover {
+  color: #2186df;
+}
+footer p .sass:hover {
+  color: #c76494;
+}
+
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev,
