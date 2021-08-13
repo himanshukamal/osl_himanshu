@@ -821,6 +821,14 @@ button:hover:after {
 }
 
 footer {
+    background-image: url("https://images.unsplash.com/photo-1501466044931-62695aada8e9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=678&q=80");
+    // -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    // filter: grayscale(100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    margin: 0;
+    background-size: cover;
     p {
         flex-shrink: 0;
         padding: 20px 10px;
@@ -829,6 +837,7 @@ footer {
         text-align: center;
         margin: 0;
         font-family: 'Poppins';
+        opacity: 0.8;
         .white_icon {
             color: #fff;
             font-size: 4em;
