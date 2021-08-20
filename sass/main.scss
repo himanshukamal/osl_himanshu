@@ -366,7 +366,7 @@ button:hover:after {
     }
     .article_heading {
         font-family: 'Poppins';
-        font-size: 1.6em;
+    
     }
     .article {
         font-family: "Poppins";
@@ -609,10 +609,18 @@ button:hover:after {
 .fifth_section {
     max-width: $section_desktop_width;
     margin: 2em auto 0;
+    @include respond(phone) {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
     .heading_wrapper {
         display: flex;
         margin-left: 8.9em;
         margin-top: 8em;
+        @include respond(phone) {
+            margin-left: 4.9em;
+        }
         .explore_icon {
             color: purple;
             font-size: 24px;
@@ -631,10 +639,18 @@ button:hover:after {
     .article_container {
         display: flex;
         justify-content: flex-start;
+        @include respond(phone) {
+            flex-direction: column;
+        }
         .article_wrapper {
             padding: 2em 4em;
             margin: 2em;
             width: 69%;
+            @include respond(phone) {
+                margin: 0;
+                width: 100%;
+                padding: 1em 1em;
+            }
             .title {
                 font-family: 'Poppins';
                 font-size: 1.6em;
@@ -658,15 +674,31 @@ button:hover:after {
             width: 13em;
             height: 53px;
             margin-top: 8em;
+            @include respond(phone) {
+                margin-top: 2em;
+                margin-left: 17vw;
+            }
         }
     }
     .six_images_wrapper {
         display: flex;
         margin: 10px;
+        @include respond(phone) {
+            margin-top: 5em;
+            flex-direction: column;
+        }
         .highlight {
             width: 50%;
+            @include respond(phone) {
+                width: 100%;
+            }
             img {
                 width: 100%;
+                @include respond(phone) {
+                    height: 100vw;
+                    width: 100vw;
+                    object-fit: cover;
+                }
                 
             }
         }
@@ -675,15 +707,29 @@ button:hover:after {
             grid-template-columns: auto auto;
             width: 50%;
             padding: 0em 3em;
+            @include respond(phone) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-top: 3em;
+                padding: 0;
+                width: 100%;
+            }
             .card{
                 margin: 10px;
                 img {
                     width: 100%;
                     height: 160px;
                     max-height: 160px;
+                    @include respond(phone) {
+                        object-fit: cover;
+                    }
                 }
                 .icon_text_wrapper{
                     display: flex;
+                    @include respond(phone) {
+                        justify-content: center;
+                    }
                     .title_wrapper {
                         display: flex;
                         margin-top: 10px;
@@ -720,8 +766,14 @@ button:hover:after {
     display: flex;
     overflow: hidden;
     margin-top: 2em;
+    @include respond(phone) {
+        flex-direction: column;
+    }
     .grid {
         width: 33%;
+        @include respond(phone) {
+            width: 100%;
+        }
         &:hover {
             width: 50%;
             transition: all .8s ease-in;
@@ -741,6 +793,9 @@ button:hover:after {
         text-align: center;
         cursor: pointer;
         background: linear-gradient(to top , rgb(0, 0, 0) 100%, transparent 0%);
+        @include respond(phone) {
+            margin: 0px 0%;
+        }
     }
     
     .grid figure img {
@@ -751,6 +806,9 @@ button:hover:after {
         opacity: 0.8;
         height: 770px;
         object-fit: cover;
+        @include respond(phone) {
+            height: 350px;
+        }
         
     }
     
