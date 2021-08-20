@@ -1,1 +1,9 @@
-{"version":3,"sourceRoot":"","sources":["fonts.scss"],"names":[],"mappings":"AAAQ;AACA","file":"fonts.css"}
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAC,iEAAI;AACZ,OAAO,CAAC,sFAAI",
+    "sources": [
+        "fonts.scss"
+    ],
+    "names": [],
+    "file": "fonts.css"
+}
